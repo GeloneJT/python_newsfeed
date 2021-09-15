@@ -1,5 +1,6 @@
 from flask import Flask
 from app.routes import home
+from app.routes import dashbaord
 
 
 def create_app(test_config=None):
@@ -16,5 +17,6 @@ def create_app(test_config=None):
 
     # register routes
     app.register_blueprint(home)
+    app.register_blueprint(dashbaord)
 
     return app
